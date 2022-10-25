@@ -7,7 +7,7 @@
             <p><%= t.title %></p>
             <p>
                 <% t.photographs.each do |photographs| %>
-                    <%= image_tag photographs.url %>
+                    <%= image_tag photographs.url ,:size=> "250x200"%>
                 <% end %>
             </p>
             <% if user_signed_in? %>
