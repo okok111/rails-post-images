@@ -6,10 +6,8 @@
             <p><a href="/users/<%= t.user.id %>"><%= t.user.name %></a></p>
             <p><%= t.title %></p>
             <p>
-                <% if t.image.present? %>
-                    <%= image_tag t.image_url, size: '250x200'%>
-                <% else %>
-                    <%= image_tag "nonono.png", size: '250x200' %>
+                <% t.photographs.each do |photographs| %>
+                    <%= image_tag photographs.url %>
                 <% end %>
             </p>
             <% if user_signed_in? %>

@@ -3,8 +3,8 @@
 <div class="field">
     <%= f.label :title %>
     <p><%= f.text_field :title, :size => 20 %></p>
-    <%= f.label :image %>
-    <p><%= f.file_field :image %></p>
+    <%= f.label :photographs ,"写真複数でいくぜ" %>
+    <p><%= f.file_field :photographs , multiple: true %></p>
     <%= f.label :contents %>
     <p><%= f.text_field :contents, :size => 20 %></p>
 </div>
